@@ -1,0 +1,54 @@
+	<!-- CONTENT -->
+	<table class="Table-Tenant">
+		
+		<thead>
+			<tr><caption>TENANTS</caption></tr>
+			<tr>
+				<th>Tenant ID</th>
+				<th>Tenants</th>
+				<th>Age</th>
+				<th>Contact no</th>
+				<th>Address</th>
+				<th>Email</th>
+				<th>Building ID</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<?php
+
+				$sql = "Select * FROM tenants";
+				$rs = mysqli_query($conn,$sql);
+
+				if($rs){
+					while ($row = mysqli_fetch_assoc($rs)) {
+						// code...
+						$ID = $row['ID'];
+						$Tenant = $row['Tenant'];
+						$Age = $row['Age'];
+						$ContactNo = $row['ContactNo'];
+						$Address = $row['Address'];
+						$Email = $row['Email'];
+						$BuildID = $row['BuildingID'];
+
+						echo 
+						"
+						<tr>
+							<td> ".$ID." </td>
+							<td> ".$Tenant." </td>
+							<td> ".$Age." </td>
+							<td> ".$ContactNo." </td>
+							<td> ".$Address." </td>
+							<td> ".$Email." </td>
+							<td> ".$BuildID." </td>
+						</tr>
+
+						";
+					}
+				}
+
+			?>
+
+		</tbody>
+
+	</table>

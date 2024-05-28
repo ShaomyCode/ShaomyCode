@@ -1,0 +1,378 @@
+*{
+	box-sizing: border-box;
+	padding:0;
+	margin: 0;
+}
+:root{
+	--clr-bg:#eff0f3;
+	--clr-headline:#0d0d0d;
+	--clr-paragraph:#2a2a2a;
+	--clr-button:#ff8e3c;
+}
+body{
+	font-family: 'Work Sans', sans-serif;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--clr-bg);
+	width: 80%;
+	margin: auto;
+}
+/*HEADER*/
+header{
+	/* From https://css.glass */
+	background: rgba(108, 100, 100, 0.77);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(12.3px);
+	-webkit-backdrop-filter: blur(12.3px);
+	border: 1px solid rgba(108, 100, 100, 0.3);	
+	z-index: 999;
+	padding: 1.5vh 0;
+	margin:20px 0;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	color: white;
+
+	nav{
+		display: flex;
+		justify-content: center;
+	}
+
+	:is(a,li,button){
+		color: white;
+		text-decoration: none;
+		border:none;
+		background: transparent;
+		cursor: pointer;
+		font-size: 16px;
+		padding:.75rem;
+		list-style: none;
+		display: block;
+		border-radius: 10px;
+		transition: 0.4s;			
+	}
+	:is(a,button):hover{
+		letter-spacing: 4px;
+		text-shadow: 3px 4px 5px black;
+	}
+
+	ul{
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		align-items: center;
+	}
+	.Active{
+		color: var(--clr-button);
+		font-weight: 800;
+	}
+
+}
+
+/*SUB-CONTENT: Search*/
+.Sub-Content{
+	position: relative;
+	width: 100%;
+	height: 45vh;
+}
+.Banner{
+	background-image: url(Background.jpg);
+	background-position: center;
+	background-repeat: repeat-x;
+  	filter: blur(2px);
+  	-webkit-filter: blur(2px);
+}
+.Search{
+	z-index: 1;
+	position: absolute;
+	display:block;
+	outline: none;
+	border:none;
+	left: 35%;
+	top: 30%;
+	width: 50%;
+	align-items: center;
+	justify-content: center;
+
+}
+.Search h3{
+	color: white;
+	text-transform: uppercase;
+	left: 5%;
+	display: block;
+	position: relative;
+	font-size: 50px;
+	text-shadow: 3px 3px 2px black;
+	font-weight: bold;
+}
+.Search input{
+	border:none;
+	color:white;
+	border-bottom: 1px solid white;
+	padding: 20px;
+	width: 70%;
+	text-align: center;
+	font-size: 20px;
+	background:transparent;
+	outline: none;
+}
+/*SEARCH CONTENT: RECOMMENDATION*/
+.Recommendation{
+	width: 100%;
+	height: 40vh;
+	
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.Home-Recommendation{
+	text-align: center;
+	margin: 10px 0;
+	padding: 10px;
+}
+.Home-Recommendation h3{
+	font-size: 20px;
+	letter-spacing: 2px;
+	font-weight: bolder;
+	font-style: oblique;
+}
+.Home-Recommendation p{
+	font-weight: lighter;
+	font-size: 13px;
+}
+.Home-Recommendation button{
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 20px;
+	position: relative;
+	color: black;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px darkcyan;
+	border:.5px solid skyblue;
+	top: 20px;
+	width: 55%;
+	padding: 10px 50px;
+	transition: 0.5s;
+}
+
+.Home-Recommendation button:hover{
+	background:darkcyan;
+	color:whitesmoke;
+	border-radius: 20px;
+}
+.ImageViewer{
+	width: 20%;
+	height: 30vh;
+	border-radius: 20px;
+	box-shadow: 4px 4px 4px black;
+
+	> *{
+		flex: 1;
+	}
+}
+.Image1{
+	background-image: url(Image1.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.Image2{
+	background-image: url(Image2.jpg);
+	background-position: center;
+	background-size: cover;	
+}
+.Image3{
+	background-image: url(Image3.jpg);
+	background-position: center;
+	background-size: cover;	
+}
+/*CARD:SECTION*/
+.Option{
+	height: 70vh;
+	margin-block: 5rem;
+	position: relative;
+	background-color: whitesmoke;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+.Card{
+	flex: 1;
+	border-radius: 10px;
+	box-shadow: 3px 4px 5px black;
+	display: block;
+	position: relative;
+	height: 50vh;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+}
+.Card:hover {
+	transform: scale(1.1);
+	z-index: 3;
+	
+}
+.Card p{
+	text-align: justify;
+	text-indent: 2px;
+	padding: 4px;
+	margin: 20px;
+	height: 8vh;
+	display: block;
+}
+.Card a{
+	text-align: center;
+	display: flex;
+	position: relative;
+	padding:15px;
+	border:1px solid black;
+	border-radius: 10px;
+	width: 50%;
+	text-decoration: none;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	transition: 0.3s;
+}
+.Card a:hover{
+	background:darkblue;
+	color:whitesmoke;
+}
+
+.Image{
+	height: 30vh;
+	width: 100%;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.ISell{
+	background-image: url(ForRent.jpg);
+}
+.Buy{
+	background-image: url(ForBuy.jpg);
+
+}
+.Rent{
+	background-image: url(Try1.jpg);
+}
+footer{
+	text-align: center;
+	color: white;
+	margin-block: auto;
+	background: white;
+	padding: .50rem;
+	position: relative;
+	bottom: 10px;
+	/* From https://css.glass */
+	background: rgba(108, 100, 100, 0.77);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(12.3px);
+	-webkit-backdrop-filter: blur(12.3px);
+	border: 1px solid rgba(108, 100, 100, 0.3);
+
+
+		nav{
+		display: flex;
+		justify-content: center;
+	}
+
+	:is(a,li,button){
+		color: white;
+		text-decoration: none;
+		border:none;
+		background: transparent;
+		cursor: pointer;
+		font-size: 16px;
+		padding:.75rem;
+		list-style: none;
+		display: block;
+		border-radius: 10px;
+		transition: 0.4s;			
+	}
+	:is(a,button):hover{
+		letter-spacing: 4px;
+		text-shadow: 3px 4px 5px black;
+	}
+
+	ul{
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		align-items: center;
+	}
+	i{
+		font-size: 2rem;
+	}
+
+}
+
+/*FOR DIALOG LOGIN*/
+dialog{
+	border: 1px solid red;
+	width: 20%;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.71);
+	border-radius: 16px;
+	box-shadow: 4px 4px 5px black;
+	backdrop-filter: blur(8.4px);
+	-webkit-backdrop-filter: blur(8.4px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	margin: auto;
+}
+.form-input{
+	width: 100%;
+	background:transparent;
+	margin-bottom: 10px;
+}
+.form-input input{
+	width: 90%;
+	margin: auto;
+	display: block;
+	background:none;
+	text-align: center;
+	padding: 10px;
+	border:none;
+	outline: none;
+	border-bottom: 1px solid black;
+	
+}
+#submitBTN{
+	background: transparent;
+	border:none;
+	outline: none;
+	border-radius: 10px;
+	padding: 15px;
+	box-shadow: 4px 4px 4px black;
+	display: block;
+	margin: auto;
+	width: 50%;
+	cursor: pointer;
+	transition: 0.3s;
+}
+#submitBTN:hover{
+	border-radius: 20px;
+	background-color: darkgreen;
+	color: whitesmoke;
+}
+.Close{
+	float: right;
+	background: none;
+	margin: 10px;
+	width: 30px;
+	height: 30px;
+	border:none;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.Close:hover{
+	transform: rotate(90deg) scale(1.1);
+	color: darkred;
+}

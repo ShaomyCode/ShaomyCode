@@ -1,0 +1,160 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box ;
+}
+body {
+	font-family: 'Work Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align:center; }
+
+header {
+		width: 100%;
+/*	background: rgba(0,0,0,0);*/	
+	padding: 3rem;
+	position: sticky;
+	display:block;
+	box-shadow: 3px 3px 3px black;}
+
+.Navigator-Head ul,.More-Details ul{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.Navigator-Head ul li a{
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 20px;
+	position: relative;
+	color: black;
+}
+.Navigator-Head ul li a::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background-color: red;
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+.Navigator-Head ul li a:hover::after{
+	width: 100%;
+}
+.fa-building-user{
+	color:darkred;
+}
+.Navigator-Head ul li > h3{
+	font-size: 40px;
+	color:black;
+	font-style: bold;
+	font-weight: bolder;
+	letter-spacing: 2px;
+}
+.Navigator-Head ul li > p{
+	color:darkred;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+footer{
+	margin-top: 10px;
+	width: 100%;
+	height: 70vh;
+
+}
+.letUsKnow{
+
+	text-align: center;
+	margin: auto;
+	width: 70%;
+	top: 50px;
+	display: block;
+	position: relative;
+}
+.letUsKnow p{
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	font-size: 13px;
+}
+.fa-brands{
+	color:black;
+	font-size: 50px;
+	transition: 0.3s;
+}
+.fa-brands:hover{
+	color:darkred;
+	transform: scale(1.1);
+}
+.FooterNav ul{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	top: 10rem;
+	position: relative;
+}
+.Footer-BG{
+	background-image: url(FinalfooterV1.png);
+	background-repeat: repeat-x;
+	filter: blur(1px);
+  	-webkit-filter: blur(1px);
+	position: relative;
+	display: block;
+	top: 200px;
+	height: 35vh;
+	width: 100%;
+}
+
+.headcontainer {
+	margin:20px;
+	padding: 20px;
+}
+.subcontainer h2, p {
+	margin:20px;
+	padding: 20px;}
+
+container {
+	width: 800px;
+	margin: 0 auto;
+	padding: 20px;}
+
+h1 {
+color: ##FDFEFE;}
+
+p {
+color: #666;}
+
+.grid-container img {
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 20px;
+	position: relative;
+	color: black;
+	border:  3px solid black;
+}
+
+.grid-item{
+	
+	box-shadow: 3px 3px 3px black;
+}
+.grid-item img {
+	height:30vh;
+	border-radius: 100px;
+	margin: 10px;
+}
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px;
+}

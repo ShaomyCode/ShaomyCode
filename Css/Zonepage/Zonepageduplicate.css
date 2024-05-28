@@ -1,0 +1,330 @@
+*{
+	box-sizing: border-box;
+	padding:0;
+	margin: 0;
+}
+body{
+	font-family: 'Work Sans', sans-serif;
+	width: 100%;
+	height: 100vh;
+	background-color: #ede7e6;
+}
+
+/*HEADER*/
+header{
+	width: 100%;
+/*	background: rgba(0,0,0,0);*/	
+	padding: 3rem;
+	position: sticky;
+	display:block;
+	box-shadow: 3px 3px 3px black;
+	z-index: 5;
+
+}
+
+.Navigator-Head ul,.More-Details ul{
+	list-style: none;
+	display: flex;
+	z-index: 1000;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.Navigator-Head ul li a{
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 20px;
+	position: relative;
+	color: black;
+}
+.Navigator-Head ul li a::after{
+	content: '';
+	height: 3px;
+	z-index: 5;
+	width: 0;
+	background-color: red;
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+.Navigator-Head ul li a:hover::after{
+	width: 100%;
+}
+.fa-building-user{
+	color:darkred;
+}
+.Navigator-Head ul li > h3{
+	font-size: 40px;
+	color:black;
+	font-style: bold;
+	z-index: 5;
+	font-weight: bolder;
+	letter-spacing: 2px;
+}
+.Navigator-Head ul li > p{
+	color:darkred;
+	z-index: 5;
+	font-weight: bolder;
+	font-size: 20px;
+}
+/*GRID PART*/
+.Grid-Center{
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-bottom: 50px;
+	
+}
+.Image-grid{
+	width: 100%;
+	display: grid;
+	flex-wrap: wrap;
+	grid-template-columns: minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) ;
+	gap:25px;
+
+}
+.Image-Container{
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: 3px 3px 5px black;
+	display: block;
+	cursor: pointer;
+	width: 95%;
+	height: 50vh;
+	transition: 0.3s;
+
+}
+.Image-Container:hover{
+	transform: scale(1.1);
+	z-index: 1;
+
+}
+.LinkBox{
+	text-decoration: none;
+	color: black;
+}
+.Image-Container ul{
+	padding: 5px;
+ 	list-style: none;	
+}
+.Image-Container ul p{
+	margin: 5px;
+}
+.Image{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 30vh;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+/*BUILDING: IMAGES*/
+.Bldg1,.DialogImage1{
+	background-image: url(Bldg1.jpg);
+}
+.Bldg2,.DialogImage2{
+	background-image: url(Bldg2.jpg);
+}
+.Bldg3,.DialogImage3{
+	background-image: url(Bldg3.jpg);
+}
+.Bldg4,.DialogImage4{
+	background-image: url(Bldg4.jpg);
+}
+.Bldg5,.DialogImage5{
+	background-image: url(Bldg5.jpg);
+}
+.Bldg6,.DialogImage6{
+	background-image: url(Bldg6.jpg);
+}
+.Image-Container h3{
+	margin-left: 10px;
+}
+
+/*FOOTER PART*/
+footer{
+	margin-top: 10px;
+	width: 100%;
+	height: 70vh;
+
+}
+.letUsKnow{
+
+	text-align: center;
+	margin: auto;
+	width: 70%;
+	top: 50px;
+	display: block;
+	position: relative;
+}
+.letUsKnow p{
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	font-size: 13px;
+}
+.fa-brands{
+	color:black;
+	font-size: 50px;
+	transition: 0.3s;
+}
+.fa-brands:hover{
+	color:darkred;
+	transform: scale(1.1);
+}
+.FooterNav ul{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	top: 10rem;
+	position: relative;
+}
+.Footer-BG{
+	background-image: url(FinalfooterV1.png);
+	filter: blur(1px);
+  	-webkit-filter: blur(1px);
+	position: relative;
+	display: block;
+	top: 200px;
+	height: 35vh;
+}
+
+/*CONTENT START HERE*/
+.MainBox{
+	width: 100%;
+	background-image: url(Background.jpg);
+	height: 70vh;
+
+}
+.Image-Box{
+	padding: 10px;
+	box-shadow: 3px 3px 3px black;
+	width: 50%;
+	height: 50vh;
+	display: flex;
+	position: relative;
+	top: 20%;
+	margin: auto;
+	/* From https://css.glass */
+	background: rgba(192, 174, 174, 0.7);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(15.3px);
+	-webkit-backdrop-filter: blur(15.3px);
+	border: 1px solid rgba(192, 174, 174, 0.3);
+}
+.Images{
+	width: 40%;
+	padding: 10px;
+}
+.Images img{
+	max-height: 100%;
+	width: 100%;
+	border-radius: 10px;
+}
+.Details{
+	width: 60%;
+	padding: 10px;
+}
+.Details p{
+	color: white;
+	font-size: 20px;
+	padding: 10px;
+	margin: 10px;
+}
+.Modals{
+	position: absolute;
+}
+#getItem{
+	padding: 20px;
+	width: 200px;
+	display: block;
+	position: absolute;
+	right: 100px;
+	top: 15rem;
+	cursor: pointer;
+	border:none;
+	outline: none;
+	background:transparent;
+	border-bottom: 1px solid black;
+	color:ghostwhite;
+	transition: 0.4s;
+}
+#getItem:hover{
+	background-color: darkgreen;
+	color: whitesmoke;
+	border-radius: 20px;
+}
+dialog{
+	padding: 10px;
+	position: fixed;
+	z-index:999;
+	box-shadow: 3px 3px 3px black;
+	width: 50%;
+	border:none;
+	border-radius: 10px;
+	height: 50vh;
+	position: relative;
+	top: 20%;
+	margin: auto;
+}
+.form-group{
+	width: 60%;
+	margin: auto;
+	display: block;
+}
+.form-item{
+	width: 100%;
+	
+}
+.form-item input{
+	padding: 10px;
+	width: 100%;
+	margin: 10px;
+	text-align: center;
+	outline: none;
+	border:none;
+	border-bottom: 1px solid black;
+}
+#ConfirmBTN{
+	width: 50%;
+	padding: 15px;
+	display: block;
+	box-shadow: 4px 4px 5px black;
+	cursor: pointer;
+	transition: 0.3s;
+	text-align: center;
+	margin: auto;
+	border:none;
+	border-radius: 20px;
+}
+#ConfirmBTN:hover{
+	background-color: darkgreen;
+	color: whitesmoke;
+}
+.Close{
+	float: right;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	border:none;
+	
+	cursor: pointer;
+	transition: 0.3s;
+}
+.Close:hover{
+	transform: scale(1.1) rotate(90deg);
+	color: whitesmoke;
+	background-color: darkred;
+}
